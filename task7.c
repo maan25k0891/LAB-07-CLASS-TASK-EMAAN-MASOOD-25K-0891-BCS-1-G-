@@ -1,32 +1,22 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main() {
-    char word[100];
-    int vowels = 0;
-	int consonants = 0;
-    int i = 0;
-    char ch;
+int main(){
+int id[10], i, j, marks[10]={0};
 
-    printf("Enter a word: ");
-    scanf("%s", word);  
-
-    while (word[i] != '\0') {  
-        ch = word[i];
-
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
-            ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
-            vowels++;
-        }
-        else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
-            consonants++;
-        }
-
-        i++; 
-    }
-
-    printf("Number of vowels: %d\n", vowels);
-    printf("Number of consonants: %d\n", consonants);
-
-    return 0;
+printf("Enter the id: ");
+for (i=0; i<10; i++){
+scanf("%d", &id[i]);
+if (marks[id[i]]==0){
+marks[id[i]]=1;
+}
+else {
+id[i]=-1;
+}
+}
+printf("New array:\n");
+for (i=0; i<10; i++){
+printf("%d ", id[i]);
 }
 
+return 0;
+}
